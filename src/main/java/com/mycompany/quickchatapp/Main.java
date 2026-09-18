@@ -11,7 +11,6 @@ import java.util.Scanner;
   
   @author [Andiswa Mkhize] - [ST10512300]
  */
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -56,7 +55,6 @@ public class Main {
             System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         }
         
-
         // 2. Only proceed if ALL validations passed
         if (usernameValid && passwordValid && cellValid) { 
             login.registerUser(firstName, lastName, username, password, cellPhone);
