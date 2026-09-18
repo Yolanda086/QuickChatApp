@@ -29,6 +29,8 @@ public class Main {
         String password = scanner.nextLine();
         System.out.print("Enter Cell Phone Number (e.g., +27838968976): ");
         String cellPhone = scanner.nextLine();
+        
+        // Line to create space
         System.out.println();
 
         // 1. Call the methods first and display individual messages
