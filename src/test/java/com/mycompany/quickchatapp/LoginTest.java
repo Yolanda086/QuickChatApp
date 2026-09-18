@@ -35,55 +35,55 @@ public class LoginTest {
         assertTrue(login.checkUserName("kyl_1"));
     }
 
-    @Test
+    @Test 
     public void testCheckUserName_Invalid() {
         assertFalse(login.checkUserName("kyle!!!!!!!"));
     }
 
     // ========== PASSWORD TESTS ==========
-    @Test
+    @Test 
     public void testCheckPasswordComplexity_Valid() {
         assertTrue(login.checkPasswordComplexity("Ch&&sec@ke99!"));
     }
 
-    @Test
+    @Test 
     public void testCheckPasswordComplexity_Invalid() {
         assertFalse(login.checkPasswordComplexity("password"));
     }
 
     // ========== CELL PHONE TESTS ==========
-    @Test
+    @Test 
     public void testCheckCellPhoneNumber_Valid() {
         assertTrue(login.checkCellPhoneNumber("+27838968976"));
     }
 
-    @Test
+    @Test 
     public void testCheckCellPhoneNumber_Invalid() {
         assertFalse(login.checkCellPhoneNumber("08966553"));
     }
 
     // ========== LOGIN TESTS ==========
-    @Test
+    @Test 
     public void testLoginUser_Success() { 
         login.registerUser("Kyle", "Smith", "kyl_1", "Ch&&sec@ke99!", "+27838968976");
         assertTrue(login.loginUser("kyl_1", "Ch&&sec@ke99!"));
     }
 
-    @Test
+    @Test 
     public void testLoginUser_Failure() {
         login.registerUser("Kyle", "Smith", "kyl_1", "Ch&&sec@ke99!", "+27838968976");
         assertFalse(login.loginUser("kyl_1", "WrongPass1!"));
     }
 
     // ========== REGISTRATION MESSAGE TESTS ==========
-    @Test
+    @Test 
     public void testRegisterUser_InvalidUsernameMessage() {
         String expected = "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
         String result = login.registerUser("A", "B", "kyle!!!!!!!", "Ch&&sec@ke99!", "+27838968976");
         assertEquals(expected, result);
     }
 
-    @Test
+    @Test 
     public void testRegisterUser_InvalidPasswordMessage() {
         String expected = "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
         String result = login.registerUser("A", "B", "kyl_1", "password", "+27838968976");
@@ -91,7 +91,7 @@ public class LoginTest {
     }
 
     // ========== LOGIN STATUS MESSAGE TESTS ==========
-    @Test
+    @Test 
     public void testReturnLoginStatus_Success() {
         login.registerUser("Kyle", "Smith", "kyl_1", "Ch&&sec@ke99!", "+27838968976");
         boolean ok = login.loginUser("kyl_1", "Ch&&sec@ke99!");
@@ -99,7 +99,7 @@ public class LoginTest {
         assertEquals(expected, login.returnLoginStatus(ok));
     }
 
-    @Test
+    @Test 
     public void testReturnLoginStatus_Failure() {
         boolean ok = login.loginUser("wrong_user", "WrongPass1!");
         String expected = "Username or password incorrect, please try again.";
