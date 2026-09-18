@@ -30,6 +30,7 @@ public class LoginTest {
 
     // ========== USERNAME TESTS ==========
     @Test
+    // Verify valid username format passes
     public void testCheckUserName_Valid() {
         assertTrue(login.checkUserName("kyl_1"));
     }
