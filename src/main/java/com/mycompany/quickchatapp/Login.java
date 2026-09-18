@@ -27,10 +27,10 @@ public class Login {
 
     /*
     Checks if the password meets the complexity rules:
-    - 8 characters long
-    - One capital letter
-    - One number
-    - One special character
+    -At least 8 characters long
+    -Contains at least one capital letter
+    -Contains at least one number
+    -Contains at least one special character
     */
     public boolean checkPasswordComplexity(String password) {
         if (password.length() < 8) return false;
