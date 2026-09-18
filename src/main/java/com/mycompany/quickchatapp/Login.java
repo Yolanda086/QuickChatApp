@@ -3,10 +3,8 @@ package com.mycompany.quickchatapp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//Login class handles user registration and authentication.
+//Login class handles the user's registration and authentication part.
 /*
-  The Login class handles user registration and authentication.
-  
   REFERENCES:
   [1] R. C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship. 
       Upper Saddle River, NJ, USA: Prentice Hall, 2008.
